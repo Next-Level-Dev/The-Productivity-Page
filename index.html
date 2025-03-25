@@ -5,14 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tool Hub</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for the date/time display */
+        #datetime {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
+    <div id="datetime">Year: Month: Day: Hour: Minute</div> <!-- Date/Time Display -->
     <div class="container">
         <div class="header">
             <h1>Tool Hub</h1>
             <nav>
                 <ul>
                     <li><a href="#" onclick="loadTool('click_counter')">Click Counter</a></li>
+                    <li><a href="#" onclick="loadTool('tool1')">Tool 1</a></li>
+                    <li><a href="#" onclick="loadTool('tool2')">Tool 2</a></li>
+                    <li><a href="#" onclick="loadTool('tool3')">Tool 3</a></li>
                 </ul>
             </nav>
         </div>
@@ -21,5 +35,22 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        // Function to update the date and time display
+        function updateDateTime() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+            const day = String(now.getDate()).padStart(2, '0');
+            const hour = String(now.getHours()).padStart(2, '0');
+            const minute = String(now.getMinutes()).padStart(2, '0');
+
+            document.getElementById('datetime').textContent = `Year: ${year} Month: ${month} Day: ${day} Hour: ${hour} Minute: ${minute}`;
+        }
+
+        // Update the date and time every minute
+        setInterval(updateDateTime, 60000);
+        updateDateTime(); // Initial call to set the time immediately
+    </script>
 </body>
 </html>
