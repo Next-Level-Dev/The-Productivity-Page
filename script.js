@@ -27,4 +27,3 @@ function loadJS(toolName) {
     script.src = `tools/${toolName}/js.js`;
     document.body.appendChild(script);
 }
-// update
