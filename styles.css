@@ -31,7 +31,7 @@ body {
 
 .tool-list {
     display: grid;
-    grid-template-columns: repeat(6, minmax(150px, 1fr)); /* Adjust the min width as needed */
+    grid-template-columns: repeat(13, minmax(150px, 1fr)); /* Adjust the min width as needed */
     gap: 10px; /* Space between buttons */
     list-style-type: none;
     padding: 0;
