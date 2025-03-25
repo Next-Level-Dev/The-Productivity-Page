@@ -31,7 +31,7 @@ body {
 
 .tool-list {
     display: grid;
-    grid-template-columns: repeat(13, minmax(150px, 1fr)); /* Adjust the min width as needed */
+    grid-template-columns: repeat(8, minmax(250px, 1fr)); /* Adjust the min width as needed */
     gap: 10px; /* Space between buttons */
     list-style-type: none;
     padding: 0;
@@ -50,7 +50,7 @@ body {
     color: #333; /* Dark text color */
     text-align: center;
     text-decoration: none;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 7px; /* Rounded corners */
     transition: background-color 0.3s; /* Smooth transition */
 }
 
