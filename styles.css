@@ -24,16 +24,6 @@ body {
     margin: 0;
 }
 
-.back-button {
-    text-decoration: none;
-    color: #007BFF;
-    font-weight: bold;
-}
-
-.back-button:hover {
-    text-decoration: underline;
-}
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -51,4 +41,19 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+/* Styles for the Click Counter */
+.click-counter {
+    text-align: center;
+}
+
+.click-counter button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }

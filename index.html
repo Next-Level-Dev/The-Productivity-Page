@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>Tool Hub</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to the Tool Hub</h1>
-        <nav>
-            <ul>
-                <li><a href="page1.html">Tool 1</a></li>
-                <li><a href="page2.html">Tool 2</a></li>
-                <li><a href="page3.html">Tool 3</a></li>
-            </ul>
-        </nav>
+        <div class="header">
+            <h1>Tool Hub</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="loadTool('click_counter')">Click Counter</a></li>
+                    <li><a href="#" onclick="loadTool('tool1')">Tool 1</a></li>
+                    <li><a href="#" onclick="loadTool('tool2')">Tool 2</a></li>
+                    <li><a href="#" onclick="loadTool('tool3')">Tool 3</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="content" class="content">
+            <p>Welcome! Select a tool from the menu above.</p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
