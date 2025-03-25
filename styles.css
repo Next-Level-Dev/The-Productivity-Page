@@ -34,11 +34,12 @@ body {
 
 .tool-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted for wider buttons */
+    grid-template-columns: repeat(4, 1fr); /* Fixed number of columns */
     gap: 10px; /* Space between buttons */
     list-style-type: none;
     padding: 0;
-    margin: 20px 0; /* Add margin for spacing */
+    margin: 20px auto; /* Center the grid */
+    max-width: 800px; /* Set a maximum width for the grid */
 }
 
 .tool-list li {
