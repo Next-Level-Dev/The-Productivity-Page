@@ -32,6 +32,7 @@ body {
 .tool-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted for wider buttons */
+    grid-auto-flow: column; /* Fill horizontally first */
     gap: 10px; /* Space between buttons */
     list-style-type: none;
     padding: 0;
@@ -70,6 +71,7 @@ body {
 @media (max-width: 600px) {
     .tool-list {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust for smaller screens */
+        grid-auto-flow: row; /* Change to row for smaller screens */
     }
 
     .tool-list a {
