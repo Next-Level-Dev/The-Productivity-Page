@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tool Hub</title>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="datetime">2025.03.25 20:51</div>
+    <div id="datetime">2025.03.25 20:51</div> <!-- Date/Time Display -->
     
     <div class="toolbar">
         <h1>Tool Hub</h1>
-        <nav>
-            <ul>
-                <li><a href="#" onclick="loadTool('click_counter')">Click Counter</a></li>
-            </ul>
-        </nav>
+    </div>
+
+    <div class="tools-container">
+        <h2>Select a Tool</h2>
+        <div class="tools-grid">
+            <button class="tool-button" onclick="loadTool('click_counter')">Click Counter</button>
+            <button class="tool-button" onclick="loadTool('tool1')">Tool 1</button>
+            <button class="tool-button" onclick="loadTool('tool2')">Tool 2</button>
+            <button class="tool-button" onclick="loadTool('tool3')">Tool 3</button>
+        </div>
     </div>
 
     <div id="content" class="content">
