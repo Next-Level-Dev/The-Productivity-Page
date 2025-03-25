@@ -50,7 +50,7 @@ body {
 .tool-list a {
     display: block;
     padding: 15px; /* Increased padding for wider buttons */
-    height: 50px; /* Fixed height for uniform button size */
+    height: 40px; /* Fixed height for uniform button size */
     background-color: #e0e0e0; /* Gray background */
     color: #0e0d0d; /* Dark text color */
     text-align: center;
