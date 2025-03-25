@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="pageTitle">Tool Hub</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> <!-- Load script.js -->
 </head>
 <body>
     <div id="datetime">2025.03.25 20:51</div> <!-- Date/Time Display -->
@@ -27,44 +28,5 @@
     <div id="content" class="content">
         <p id="welcomeMessage">Welcome! Select a tool from the menu above.</p>
     </div>
-
-    <script src="script.js"></script>
-    <script>
-        // Language translations
-        const translations = {
-            en: {
-                pageTitle: "Tool Hub",
-                toolbarTitle: "Tool Hub",
-                selectToolTitle: "Select a Tool",
-                welcomeMessage: "Welcome! Select a tool from the menu above.",
-                clickCounterButton: "Click Counter",
-                tool1Button: "Tool 1",
-                tool2Button: "Tool 2",
-                tool3Button: "Tool 3"
-            },
-            tr: {
-                pageTitle: "Araç Merkezi",
-                toolbarTitle: "Araç Merkezi",
-                selectToolTitle: "Bir Araç Seçin",
-                welcomeMessage: "Hoş geldiniz! Yukarıdaki menüden bir araç seçin.",
-                clickCounterButton: "Tıklama Sayacı",
-                tool1Button: "Araç 1",
-                tool2Button: "Araç 2",
-                tool3Button: "Araç 3"
-            }
-        };
-
-        // Function to set the language
-        function setLanguage(lang) {
-            document.getElementById('pageTitle').innerText = translations[lang].pageTitle;
-            document.getElementById('toolbarTitle').innerText = translations[lang].toolbarTitle;
-            document.getElementById('selectToolTitle').innerText = translations[lang].selectToolTitle;
-            document.getElementById('welcomeMessage').innerText = translations[lang].welcomeMessage;
-            document.getElementById('clickCounterButton').innerText = translations[lang].clickCounterButton;
-            document.getElementById('tool1Button').innerText = translations[lang].tool1Button;
-            document.getElementById('tool2Button').innerText = translations[lang].tool2Button;
-            document.getElementById('tool3Button').innerText = translations[lang].tool3Button;
-        }
-    </script>
 </body>
 </html>
