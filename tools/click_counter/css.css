@@ -2,7 +2,11 @@
     text-align: center;
 }
 
-.click-counter button {
+.counter {
+    margin: 10px 0;
+}
+
+.counter button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
