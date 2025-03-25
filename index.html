@@ -3,41 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tool Hub</title>
+    <title id="pageTitle">Tool Hub</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="datetime">2025.03.25 20:51</div> <!-- Date/Time Display -->
     
-    <div class="toolbar">
-        <h1>Tool Hub</h1>
-    </div>
-
     <div class="tools-container">
-        <h2>Select a Tool</h2>
+        <h1 id="toolbarTitle">Tool Hub</h1>
+        <div>
+            <button onclick="setLanguage('en')">English</button>
+            <button onclick="setLanguage('tr')">Türkçe</button>
+        </div>
+        <h2 id="selectToolTitle">Select a Tool</h2>
         <div class="tools-grid">
-            <button class="tool-button" onclick="loadTool('click_counter')">Click Counter</button>
-            <button class="tool-button" onclick="loadTool('click_counter')">Click Counter</button>
-            <button class="tool-button" onclick="loadTool('click_counter')">Click Counter</button>
-            <button class="tool-button" onclick="loadTool('click_counter')">Click Counter</button>
-            <button class="tool-button" onclick="loadTool('click_counter')">Click Counter</button>
-            <button class="tool-button" onclick="loadTool('click_counter')">Click Counter</button>
-            <button class="tool-button" onclick="loadTool('click_counter')">Click Counter</button>
-            <button class="tool-button" onclick="loadTool('click_counter')">Click Counter</button>
-            <button class="tool-button" onclick="loadTool('click_counter')">Click Counter</button>
-            <button class="tool-button" onclick="loadTool('click_counter')">Click Counter</button>
-            <button class="tool-button" onclick="loadTool('click_counter')">Click Counter</button>
-            <button class="tool-button" onclick="loadTool('click_counter')">Click Counter</button>
-            <button class="tool-button" onclick="loadTool('click_counter')">Click Counter</button>
-            <button class="tool-button" onclick="loadTool('click_counter')">Click Counter</button>
-            <button class="tool-button" onclick="loadTool('click_counter')">Click Counter</button>
+            <button class="tool-button" onclick="loadTool('click_counter')" id="clickCounterButton">Click Counter</button>
+            <button class="tool-button" onclick="loadTool('tool1')" id="tool1Button">Tool 1</button>
+            <button class="tool-button" onclick="loadTool('tool2')" id="tool2Button">Tool 2</button>
+            <button class="tool-button" onclick="loadTool('tool3')" id="tool3Button">Tool 3</button>
         </div>
     </div>
 
     <div id="content" class="content">
-        <p>Welcome! Select a tool from the menu above.</p>
+        <p id="welcomeMessage">Welcome! Select a tool from the menu above.</p>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Language translations
+        const translations = {
+            en: {
+                pageTitle: "Tool Hub",
+                toolbarTitle: "Tool Hub",
+                selectToolTitle: "Select a Tool",
+                welcomeMessage: "Welcome! Select a tool from the menu above.",
+                clickCounterButton: "Click Counter",
+                tool1Button: "Tool 1",
+                tool2Button: "Tool 2",
+                tool3Button: "Tool 3"
+            },
+            tr: {
+                pageTitle: "Araç Merkezi",
+                toolbarTitle: "Araç Merkezi",
+                selectToolTitle: "Bir Araç Seçin",
+                welcomeMessage: "Hoş geldiniz! Yukarıdaki menüden bir araç seçin.",
+                clickCounterButton: "Tıklama Sayacı",
+                tool1Button: "Araç 1",
+                tool2Button: "Araç 2",
+                tool3Button: "Araç 3"
+            }
+        };
+
+        // Function to set the language
+        function setLanguage(lang) {
+            document.getElementById('pageTitle').innerText = translations[lang].pageTitle;
+            document.getElementById('toolbarTitle').innerText = translations[lang].toolbarTitle;
+            document.getElementById('selectToolTitle').innerText = translations[lang].selectToolTitle;
+            document.getElementById('welcomeMessage').innerText = translations[lang].welcomeMessage;
+            document.getElementById('clickCounterButton').innerText = translations[lang].clickCounterButton;
+            document.getElementById('tool1Button').innerText = translations[lang].tool1Button;
+            document.getElementById('tool2Button').innerText = translations[lang].tool2Button;
+            document.getElementById('tool3Button').innerText = translations[lang].tool3Button;
+        }
+    </script>
 </body>
 </html>
