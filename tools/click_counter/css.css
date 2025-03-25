@@ -8,7 +8,7 @@
 }
 
 .counter input {
-    width: 50px; /* Set a fixed width for the input boxes */
+    width: 60px; /* Set a fixed width for the input boxes */
     text-align: center; /* Center the text in the input box */
     margin: 0 10px; /* Add margin between input and buttons */
 }
