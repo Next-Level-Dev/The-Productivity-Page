@@ -34,7 +34,7 @@ body {
 
 .tool-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
+    grid-template-columns: repeat(6, 1fr); /* Default to 6 columns for wider screens */
     gap: 10px; /* Space between buttons */
     list-style-type: none;
     padding: 0;
@@ -71,13 +71,14 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Media query for smaller screens */
+/* Media query for medium screens */
 @media (max-width: 900px) {
     .tool-list {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for medium screens */
     }
 }
 
+/* Media query for smaller screens */
 @media (max-width: 600px) {
     .tool-list {
         grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
@@ -89,6 +90,7 @@ body {
     }
 }
 
+/* Media query for very small screens */
 @media (max-width: 400px) {
     .tool-list {
         grid-template-columns: 1fr; /* 1 column for very small screens */
