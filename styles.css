@@ -17,26 +17,28 @@ body {
     background-color: #f8f9fa;
     padding: 10px;
     border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: column; /* Stack title and nav vertically */
+    align-items: center; /* Center items horizontally */
 }
 
 .toolbar h1 {
     margin: 0;
-    display: inline-block;
 }
 
 .toolbar nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center; /* Center the nav items */
+    flex-wrap: wrap; /* Allow wrapping of nav items */
 }
 
 .tool-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted for wider buttons */
-    grid-auto-flow: column; /* Fill horizontally first */
     gap: 10px; /* Space between buttons */
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 20px 0; /* Add margin for spacing */
 }
 
 .tool-list li {
@@ -47,6 +49,7 @@ body {
 .tool-list a {
     display: block;
     padding: 15px; /* Increased padding for wider buttons */
+    height: 60px; /* Fixed height for uniform button size */
     background-color: #e0e0e0; /* Gray background */
     color: #0e0d0d; /* Dark text color */
     text-align: center;
@@ -71,10 +74,10 @@ body {
 @media (max-width: 600px) {
     .tool-list {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust for smaller screens */
-        grid-auto-flow: row; /* Change to row for smaller screens */
     }
 
     .tool-list a {
         padding: 10px; /* Adjust padding for smaller screens */
+        height: 50px; /* Adjust height for smaller screens */
     }
 }
