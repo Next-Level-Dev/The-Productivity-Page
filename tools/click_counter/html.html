@@ -1,20 +1,18 @@
-<div id="clickCounter">
+<div id="clickCounter" class="click-counter">
     <h2>Click Counter</h2>
     
     <div class="counter">
-        <span>Current 1: <span id="countDisplay1">0</span></span>
+        <input type="number" id="countDisplay1" value="0" readonly>
         <button id="incrementButton1">+1</button>
         <button id="decrementButton1">-1</button>
     </div>
     
     <div class="counter">
-        <span>Current 2: <span id="countDisplay2">0</span></span>
+        <input type="number" id="countDisplay2" value="0" readonly>
         <button id="incrementButton2">+1</button>
         <button id="decrementButton2">-1</button>
     </div>
     
     <label for="goalInput">Set your goal:</label>
     <input type="number" id="goalInput" placeholder="Enter your goal" min="1">
-    <button id="setGoalButton">Set Goal</button>
-    <div id="goalDisplay">Goal: 0</div>
 </div>

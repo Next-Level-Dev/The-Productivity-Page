@@ -6,27 +6,12 @@
     const countDisplay1 = document.getElementById('countDisplay1');
     const countDisplay2 = document.getElementById('countDisplay2');
     const goalInput = document.getElementById('goalInput');
-    const setGoalButton = document.getElementById('setGoalButton');
-    const goalDisplay = document.getElementById('goalDisplay');
 
     // Function to update the displays
     function updateDisplays() {
-        countDisplay1.textContent = count1;
-        countDisplay2.textContent = count2;
-        goalDisplay.textContent = `Goal: ${goal}`;
+        countDisplay1.value = count1; // Update the first counter display
+        countDisplay2.value = count2; // Update the second counter display
     }
-
-    // Event listener for setting the goal
-    setGoalButton.addEventListener('click', () => {
-        const inputGoal = parseInt(goalInput.value, 10);
-        if (inputGoal > 0) {
-            goal = inputGoal; // Set the goal
-            updateDisplays(); // Update the displays
-            goalInput.value = ''; // Clear the input field
-        } else {
-            alert('Please enter a valid goal greater than 0.');
-        }
-    });
 
     // Event listeners for the first counter
     document.getElementById('incrementButton1').addEventListener('click', () => {

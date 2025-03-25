@@ -1,13 +1,20 @@
 .click-counter {
     text-align: center;
+    padding: 20px; /* Increased padding for overall spacing */
 }
 
 .counter {
-    margin: 10px 0;
+    margin: 15px 0; /* Increased margin for better spacing between counters */
+}
+
+.counter input {
+    width: 50px; /* Set a fixed width for the input boxes */
+    text-align: center; /* Center the text in the input box */
+    margin: 0 10px; /* Add margin between input and buttons */
 }
 
 .counter button {
-    padding: 10px 20px;
+    padding: 5px 10px; /* Thinner buttons */
     font-size: 16px;
     cursor: pointer;
 }
