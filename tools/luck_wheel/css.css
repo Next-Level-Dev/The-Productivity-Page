@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-area {
+    margin-bottom: 20px;
+}
+
+.wheel {
+    width: 300px;
+    height: 300px;
+    border: 16px solid #3498db;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.wheel div {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: #3498db;
+    transform-origin: 100% 100%;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
