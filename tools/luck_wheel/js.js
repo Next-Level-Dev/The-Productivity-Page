@@ -1,6 +1,7 @@
 const results = [];
 const wheel = document.getElementById('wheel');
 const resultDisplay = document.getElementById('resultDisplay');
+const resultsList = document.getElementById('resultsList');
 
 document.getElementById('addButton').addEventListener('click', () => {
     const result = document.getElementById('result').value;
@@ -9,6 +10,7 @@ document.getElementById('addButton').addEventListener('click', () => {
     if (result && chance > 0) {
         results.push({ result, chance });
         updateWheel();
+        updateResultsList();
         document.getElementById('result').value = '';
         document.getElementById('chance').value = '';
     } else {
@@ -38,15 +40,35 @@ document.getElementById('spinButton').addEventListener('click', () => {
 function updateWheel() {
     wheel.innerHTML = '';
     const totalChances = results.reduce((sum, item) => sum + item.chance, 0);
-    let currentAngle = 0;
+    let currentWidth = 0;
 
     results.forEach(item => {
-        const sliceAngle = (item.chance / totalChances) * 360;
+        const sliceWidth = (item.chance / totalChances) * 100; // Percentage width
         const slice = document.createElement('div');
-        slice.style.transform = `rotate(${currentAngle}deg)`;
+        slice.style.width = `${sliceWidth}%`;
         slice.style.backgroundColor = getRandomColor();
-        currentAngle += sliceAngle;
+        slice.textContent = item.result; // Display the result name
         wheel.appendChild(slice);
+    });
+}
+
+function updateResultsList() {
+    resultsList.innerHTML = '';
+    results.forEach((item, index) => {
+        const resultItem = document.createElement('div');
+        resultItem.className = 'result-item';
+        resultItem.textContent = `${item.result} (Chance: ${item.chance})`;
+        
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.onclick = () => {
+            results.splice(index, 1);
+            updateWheel();
+            updateResultsList();
+        };
+        
+        resultItem.appendChild(removeButton);
+        resultsList.appendChild(resultItem);
     });
 }
 
