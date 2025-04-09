@@ -22,7 +22,7 @@
     padding: 10px 15px; /* Consistent button padding */
     font-size: 16px;
     cursor: pointer;
-    background-color: #28a745; /* Green background for buttons */
+    background-color: #28a745 !important; /* Green background for buttons */
     color: white; /* White text color */
     border: none; /* Remove default border */
     border-radius: 4px; /* Rounded corners for buttons */
@@ -30,7 +30,7 @@
 }
 
 .random-choice-container button:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838 !important; /* Darker green on hover */
 }
 
 .random-choice-container .result {

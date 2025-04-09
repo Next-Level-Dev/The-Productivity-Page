@@ -34,5 +34,5 @@
 }
 
 .counter button:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838 !important; /* Darker green on hover */
 }
