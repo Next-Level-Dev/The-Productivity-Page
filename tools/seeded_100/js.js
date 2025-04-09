@@ -19,5 +19,5 @@ document.getElementById('uniqueGenerateButton').addEventListener('click', functi
     
     const randomNumber = Math.floor(seededRandom(seed) * 100) + 1; // Generate number between 1 and 100
     document.getElementById('uniqueGeneratedNumber').textContent = randomNumber;
-    document.getElementById('uniqueUsedSeed').textContent = seed;
+    document.getElementById('uniqueUsedSeed').textContent = seedInput; // Display the original string seed
 });
