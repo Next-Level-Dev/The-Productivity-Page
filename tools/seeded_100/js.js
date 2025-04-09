@@ -13,11 +13,11 @@ function seededRandom(seed) {
     return x - Math.floor(x);
 }
 
-document.getElementById('generateButton').addEventListener('click', function() {
-    const seedInput = document.getElementById('seedInput').value;
+document.getElementById('uniqueGenerateButton').addEventListener('click', function() {
+    const seedInput = document.getElementById('uniqueSeedInput').value;
     const seed = isNaN(seedInput) ? stringToSeed(seedInput) : parseInt(seedInput);
     
     const randomNumber = Math.floor(seededRandom(seed) * 100) + 1; // Generate number between 1 and 100
-    document.getElementById('generatedNumber').textContent = randomNumber;
-    document.getElementById('usedSeed').textContent = seed;
+    document.getElementById('uniqueGeneratedNumber').textContent = randomNumber;
+    document.getElementById('uniqueUsedSeed').textContent = seed;
 });
