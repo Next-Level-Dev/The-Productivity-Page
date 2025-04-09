@@ -8,7 +8,16 @@ function loadTool(toolName) {
             return response.text();
         })
         .then(html => {
-            document.getElementById('content').innerHTML = html;
+            // Create a unique container for the tool
+            const container = document.createElement('div');
+            container.className = `tool-container-${toolName}`; // Unique class
+            container.innerHTML = html;
+
+            // Clear previous content and append the new container
+            const contentDiv = document.getElementById('content');
+            contentDiv.innerHTML = ''; // Clear previous content
+            contentDiv.appendChild(container);
+
             loadCSS(toolName);
             loadJS(toolName);
         })
