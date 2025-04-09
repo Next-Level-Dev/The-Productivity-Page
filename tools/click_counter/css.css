@@ -1,20 +1,38 @@
+/* Scoped styles for the click counter */
 .click-counter {
     text-align: center;
-    padding: 20px; /* Increased padding for overall spacing */
+    padding: 20px; /* Overall spacing */
+    background: white; /* Background color for the counter */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 400px; /* Limit the width for better layout */
+    margin: 0 auto; /* Center the counter */
 }
 
 .counter {
-    margin: 15px 0; /* Increased margin for better spacing between counters */
+    margin: 15px 0; /* Spacing between counters */
 }
 
 .counter input {
-    width: 60px; /* Set a fixed width for the input boxes */
-    text-align: center; /* Center the text in the input box */
-    margin: 0 10px; /* Add margin between input and buttons */
+    width: 60px; /* Fixed width for input boxes */
+    text-align: center; /* Center text in input box */
+    margin: 0 10px; /* Margin between input and buttons */
+    padding: 5px; /* Padding for better touch targets */
+    border: 1px solid #ccc; /* Border for input box */
+    border-radius: 4px; /* Rounded corners for input */
 }
 
 .counter button {
-    padding: 5px 10px; /* Thinner buttons */
+    padding: 10px 15px; /* Consistent button padding */
     font-size: 16px;
     cursor: pointer;
+    background-color: #28a745; /* Green background for buttons */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners for buttons */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.counter button:hover {
+    background-color: #218838; /* Darker green on hover */
 }
